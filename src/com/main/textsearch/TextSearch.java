@@ -18,8 +18,10 @@ public class TextSearch {
 		Aggregator aggregator = null;
 
 		try {
-			File file = new File("resources/big.txt");
-			InputStream inputStream = new FileInputStream(file);
+			File file = null;
+			InputStream inputStream = null;
+			file = new File("resources/big.txt");
+			inputStream = new FileInputStream(file);
 			reader = new BufferedReader(new InputStreamReader(inputStream));
 			partBuilder = new StringBuilder();
 			futures = new ArrayList<>();
